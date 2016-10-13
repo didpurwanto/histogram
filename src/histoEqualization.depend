@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1172136010 source:f:\graduate - ntust\lab\codes\histoequalization (1)\histoequalization\src\histogram.cpp
+	"histogram.h"
+	<cstring>
+	<iostream>
+
+1172135988 f:\graduate - ntust\lab\codes\histoequalization (1)\histoequalization\src\histogram.h
+
+1161076930 source:f:\graduate - ntust\lab\codes\histoequalization (1)\histoequalization\src\bmp.cpp
+	<fstream>
+	<iostream>
+	<cstring>
+	"Bmp.h"
+
+1161076930 f:\graduate - ntust\lab\codes\histoequalization (1)\histoequalization\src\bmp.h
+	<string>
+
+1213335124 source:f:\graduate - ntust\lab\codes\histoequalization (1)\histoequalization\src\main.cpp
+	<iostream>
+	<sstream>
+	<iomanip>
+	<cstring>
+	<GL/glut.h>
+	"Bmp.h"
+	"histogram.h"
+

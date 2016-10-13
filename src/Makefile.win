@@ -1,0 +1,36 @@
+# Project: histoEqualization
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o Bmp.o histogram.o $(RES)
+LINKOBJ  = main.o Bmp.o histogram.o $(RES)
+LIBS =  -L"D:/song/Dev-Cpp/lib" -L"D:/song/MinGW/lib" -lglut32 -lglu32 -lopengl32 -lwinmm -lgdi32  -march=i386 -msse 
+INCS =  -I"D:/song/Dev-Cpp/include"  -I"D:/song/MinGW/include" 
+CXXINCS =  -I"D:/song/Dev-Cpp/include"  -I"D:/song/MinGW/include" 
+BIN  = ../bin/histoEqualization.exe
+CXXFLAGS = $(CXXINCS)   -ansi -fexpensive-optimizations -O3 -march=i386 -msse
+CFLAGS = $(INCS)   -ansi -fexpensive-optimizations -O3 -march=i386 -msse
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../bin/histoEqualization.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "..\bin\histoEqualization.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Bmp.o: Bmp.cpp
+	$(CPP) -c Bmp.cpp -o Bmp.o $(CXXFLAGS)
+
+histogram.o: histogram.cpp
+	$(CPP) -c histogram.cpp -o histogram.o $(CXXFLAGS)
